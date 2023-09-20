@@ -1,1 +1,7 @@
-console.log("Todo List");
+import { load } from './load-page';
+
+function run() {
+    load();
+}
+
+run();
