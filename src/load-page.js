@@ -12,31 +12,35 @@ function populateDivRight(div) {
 
 function populateDivLeft(div) {
     // All
-    const h2All = document.createElement("h2");
-    h2All.textContent = "All";
-    h2All.classList.add("selection-option");
-    div.appendChild(h2All);
+    const allBtn = document.createElement("button");
+    allBtn.textContent = "All";
+    allBtn.type = "button";
+    allBtn.classList.add("selection-option");
+    div.appendChild(allBtn);
     
     // Today
-    const h2Today = document.createElement("h2");
-    h2Today.textContent = "Today";
-    div.appendChild(h2Today);
+    const todayBtn = document.createElement("button");
+    todayBtn.textContent = "Today";
+    todayBtn.type = "button";
+    div.appendChild(todayBtn);
 
     // Week
-    const h2Week = document.createElement("h2");
-    h2Week.textContent = "Week";
-    div.appendChild(h2Week);
+    const weekBtn = document.createElement("button");
+    weekBtn.textContent = "Week";
+    weekBtn.type = "button";
+    div.appendChild(weekBtn);
 
     // Line separator
     div.appendChild(document.createElement("hr"));
 
     // Projects with add button
     const divProjectsHeader =  document.createElement("div");
+    divProjectsHeader.classList.add("all-projects-header");
     const h1Projects = document.createElement("h1");
     h1Projects.textContent = "Projects";
     divProjectsHeader.appendChild(h1Projects);
     const projectAddBtn = document.createElement("button");
-    projectAddBtn.textContent = "Add Project";
+    projectAddBtn.textContent = "Add";
     projectAddBtn.type = "button";
     projectAddBtn.classList.add("add-project-btn");
     divProjectsHeader.appendChild(projectAddBtn);
